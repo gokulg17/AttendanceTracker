@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.card h2 {
+  color: #2f4f4f;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.list-group-item {
+  border: none;
+  background-color: #f9f9f9;
+  margin-bottom: 4px;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+footer {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #343a40;
+}
