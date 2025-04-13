@@ -20,14 +20,6 @@ button {
   padding: 10px 15px;
 }
 
-footer {
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-  color: #6c757d;
-  font-size: 0.9rem;
-}
-
 footer a {
   color: #6c757d;
   text-decoration: none;
@@ -35,5 +27,4 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-  color: #343a40;
 }

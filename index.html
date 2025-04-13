@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ജോലി ട്രാക്കർ</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <title>ഹാജർ ട്രാക്കർ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-light">
   <div class="container py-5">
     <div class="card shadow-lg p-4 rounded-4 mx-auto" style="max-width: 500px;">
-      <h2 class="text-center mb-3">ജോലി ട്രാക്കർ</h2>
+      <h2 class="text-center mb-3">ഹാജർ ട്രാക്കർ</h2>
       <p id="status" class="fw-semibold text-center text-success"></p>
 
       <div class="d-grid gap-2 mb-3">
-        <button class="btn btn-success rounded-pill" onclick="logAction('Start Work')">Start Work</button>
-        <button class="btn btn-danger rounded-pill" onclick="logAction('End Work')">End Work</button>
-        <button class="btn btn-warning rounded-pill" onclick="logAction('Emergency Leave')">Leave</button>
-        <button class="btn btn-outline-danger rounded-pill" onclick="clearLogs()">എല്ലാം മായ്ക്കുക</button>
+        <button class="btn btn-success rounded-pill" onclick="startWork()">Start Work</button>
+        <button class="btn btn-warning rounded-pill" onclick="markLeave()">Mark Leave</button>
+        <button class="btn btn-outline-danger rounded-pill" onclick="clearLogs()">ലോഗുകൾ മായ്ക്കുക</button>
       </div>
 
       <p class="text-success text-center" id="message"></p>
 
       <div class="mt-3 text-center">
-        <h6>ആകെ ജോലി ചെയ്ത ദിവസങ്ങൾ: <span id="totalDays">0</span></h6>
-        <h6>അവധി എടുത്ത ദിവസങ്ങൾ: <span id="totalLeaves">0</span></h6>
+        <h6>ആകെ ജോലിക്കെത്തിയ ദിവസങ്ങൾ: <span id="totalDays">0</span></h6>
+        <h6>മൊത്തം അവധി എടുത്ത ദിവസം: <span id="totalLeaves">0</span></h6>
       </div>
 
       <div class="mt-4">
-        <h5>ഇന്ന്</h5>
+        <h5>ഇന്നത്തെ ലോഗുകൾ</h5>
         <ul class="list-group list-group-flush" id="todayLog"></ul>
       </div>
 
@@ -39,18 +38,11 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
   <footer class="text-center mt-5 text-muted small">
-  <p>&copy; <span id="year"></span> Gokul Gopakumar | Attendance Tracker App</p>
-  <p>
-    Contact: <a href="mailto:gokulgopakumar17@gmail.com">gokulgopakumar17@gmail.com</a> |
-    <a href="https://github.com/gokulg17" target="_blank">GitHub</a>
-  </p>
-</footer>
+    Created by <a href="https://github.com/gokulg17" target="_blank">Gokul Gopakumar</a> |
+    <a href="mailto:gokulgopakumar17@gmail.com">gokulgopakumar17@gmail.com</a>
+  </footer>
 
-<script>
-  // Set current year in footer
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
