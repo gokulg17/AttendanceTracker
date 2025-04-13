@@ -8,51 +8,56 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <div class="card shadow-lg p-4 rounded-4 mx-auto" style="max-width: 500px;">
-      <h2 class="text-center mb-3">ഹാജർ ട്രാക്കർ</h2>
-      <p id="status" class="fw-semibold text-center text-success"></p>
+<body class="d-flex flex-column min-vh-100 bg-light">
 
-      <div class="d-grid gap-2 mb-3">
-        <button class="btn btn-success rounded-pill" onclick="startWork()">Start Work</button>
-        <button class="btn btn-warning rounded-pill" onclick="markLeave()">Mark Leave</button>
-        <button class="btn btn-outline-danger rounded-pill" onclick="clearLogs()">ലോഗുകൾ മായ്ക്കുക</button>
-      </div>
+  <main class="flex-fill">
+    <div class="container py-5">
+      <div class="card shadow-lg p-4 rounded-4 mx-auto" style="max-width: 500px;">
+        <h2 class="text-center mb-3">ഹാജർ ട്രാക്കർ</h2>
+        <p id="status" class="fw-semibold text-center text-success"></p>
 
-      <p class="text-success text-center" id="message"></p>
+        <div class="d-grid gap-2 mb-3">
+          <button class="btn btn-success rounded-pill" onclick="startWork()">Start Work</button>
+          <button class="btn btn-warning rounded-pill" onclick="markLeave()">Mark Leave</button>
+          <button class="btn btn-outline-danger rounded-pill" onclick="clearLogs()">ലോഗുകൾ മായ്ക്കുക</button>
+        </div>
 
-      <div class="mt-3 text-center">
-        <h6>ആകെ ജോലി ദിവസങ്ങൾ: <span id="totalDays">0</span></h6>
-        <h6>മൊത്തം അവധി എടുത്ത ദിവസം: <span id="totalLeaves">0</span></h6>
-      </div>
+        <p class="text-success text-center" id="message"></p>
 
-      <div class="mt-4">
-        <h5>ഇന്നത്തെ ലോഗുകൾ</h5>
-        <ul class="list-group list-group-flush" id="todayLog"></ul>
-      </div>
+        <div class="mt-3 text-center">
+          <h6>ആകെ ജോലി ദിവസങ്ങൾ: <span id="totalDays">0</span></h6>
+          <h6>മൊത്തം അവധി എടുത്ത ദിവസം: <span id="totalLeaves">0</span></h6>
+        </div>
 
-      <div class="mt-4">
-        <h5>എല്ലാ ദിവസങ്ങളും</h5>
-        <ul class="list-group list-group-flush" id="allDaysLog"></ul>
+        <div class="mt-4">
+          <h5>ഇന്നത്തെ ലോഗുകൾ</h5>
+          <ul class="list-group list-group-flush" id="todayLog"></ul>
+        </div>
+
+        <div class="mt-4">
+          <h5>എല്ലാ ദിവസങ്ങളും</h5>
+          <ul class="list-group list-group-flush" id="allDaysLog"></ul>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+  
+  <span class="notice"><h5>Note: എല്ലാ ദിവസവും മറക്കാതെ ഈ പേജ് തുറക്കണം</h5></span>
 
-  <footer class="mt-5 py-3 bg-dark text-light text-center">
-  <p class="mb-1">
-    Made with <i class="bi bi-heart-fill text-danger"></i> by 
-    <a href="https://github.com/gokulg17" class="text-warning text-decoration-none" target="_blank">
-      <i class="bi bi-github"></i> Gokul Gopakumar
-    </a>
-  </p>
-  <p class="small mb-0">
-    <i class="bi bi-envelope-fill text-info me-1"></i>
-    <a href="mailto:gokulgopakumar17@gmail.com" class="text-info text-decoration-none">
-      gokulgopakumar17@gmail.com
-    </a>
-  </p>
-</footer>
+  <footer class="bg-dark text-light text-center py-3 mt-auto">
+    <p class="mb-1">
+      Made with <i class="bi bi-heart-fill text-danger"></i> by 
+      <a href="https://github.com/gokulg17" class="text-warning text-decoration-none" target="_blank">
+        <i class="bi bi-github"></i> Gokul Gopakumar
+      </a>
+    </p>
+    <p class="small mb-0">
+      <i class="bi bi-envelope-fill text-info me-1"></i>
+      <a href="mailto:gokulgopakumar17@gmail.com" class="text-info text-decoration-none">
+        gokulgopakumar17@gmail.com
+      </a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

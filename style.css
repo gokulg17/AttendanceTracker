@@ -2,6 +2,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #e0f7fa, #e0f2f1);
   min-height: 100vh;
+  /* Removed: padding-bottom: 80px; */
 }
 
 .card {
@@ -19,6 +20,7 @@ body {
 button {
   font-size: 1rem;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .list-group-item {
@@ -27,6 +29,17 @@ button {
   margin-bottom: 6px;
   border-radius: 1rem;
   padding: 10px 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item.today {
+  background-color: #c8e6c9;
+  font-weight: bold;
+}
+
+.notice {
+  color: red;
+  margin-left: 5px;
 }
 
 footer {

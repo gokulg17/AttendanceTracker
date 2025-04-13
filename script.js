@@ -52,9 +52,16 @@ function clearLogs() {
 function update() {
   const logs = getLogs();
   const today = getTodayKey();
+
+  // Auto-start for today if started previously
+  if (logs._started && !logs[today]) {
+    logs[today] = [];
+    logs[today].push({ action: "Start Work", time: new Date().toLocaleTimeString() });
+  }
+
   const todayLog = logs[today] || [];
 
-  // Handle missed End Work entries for previous days
+  // Add End Work for previous days missing it
   Object.keys(logs).forEach(date => {
     if (date === "_started") return;
     const entries = logs[date];
@@ -88,7 +95,7 @@ function update() {
     status.className = "text-danger text-center fw-semibold";
   }
 
-  // Render today's log
+  // Today log
   const todayList = document.getElementById("todayLog");
   todayList.innerHTML = "";
   todayLog.forEach(log => {
@@ -98,7 +105,7 @@ function update() {
     todayList.appendChild(li);
   });
 
-  // Render all days log
+  // All days log
   const allList = document.getElementById("allDaysLog");
   allList.innerHTML = "";
 
@@ -115,6 +122,8 @@ function update() {
 
     const li = document.createElement("li");
     li.className = "list-group-item";
+    if (date === today) li.classList.add("today");
+
     li.innerHTML = `<strong>${date}:</strong> ${dayLogs.map(log => `${log.time} - ${log.action}`).join(', ')}`;
     allList.appendChild(li);
   });
